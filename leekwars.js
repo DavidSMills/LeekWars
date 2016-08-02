@@ -73,6 +73,9 @@ require('yargs')
     .command('set-ai <leek> <ai>', 'Set ai', {}, function (argv) {
         commands.set_ai(argv);
     })
+    .command('sync-ais <folder>', 'Set ai', {}, function (argv) {
+        commands.sync_ais(argv);
+    })
     .command('ab-test <leek> <target> <ai1> <ai2>', 'Set ai',  {
                 number: {
                 alias: 'n',

@@ -7,6 +7,59 @@ Call
 url: /garden/get/ + token,
 Method: GET
 
+Précisions concernant l'API.
+De ce que j'ai pu remarquer pour l'instant, garden/get/token → garden a été simplifié.
+Et les 4 services suivants ont vu le jour :
+garden/get-composition-opponents/composition/token → opponents
+garden/get-farmer-challenge/target/token → farmer
+garden/get-farmer-opponents/token → opponents
+garden/get-leek-opponents/leek_id/token → opponents
+
+{
+  "success":true,
+  "garden":
+    {
+      "farmer_enabled":true,
+      "team_enabled":true,
+      "my_compositions":
+        [
+          {
+            "id":17208,
+            "name":"Les b\u00e9b\u00e9s",
+            "level":59,
+            "total_level":558,
+            "talent":1497,
+            "fights":10,
+            "team":5653,
+            "emblem_changed":1463478491
+          }
+        ],
+      "my_team":
+        {
+          "id":5653,
+          "name":"WeKillLeeks",
+          "level":59,
+          "emblem_changed":1463478491
+        },
+      "solo_fights":
+        {
+          "49388":20,
+          "49807":20,
+          "50541":20
+        },
+      "total_solo_fights":60,
+      "max_solo_fights":60,
+      "farmer_fights":20,
+      "max_farmer_fights":20,
+      "team_fights":10,
+      "max_team_fights":10,
+      "battle_royale_fights":10,
+      "max_battle_royale_fights":10,
+      "battle_royale_enabled":true
+    }
+  }
+
+
 
 Response
 ========
